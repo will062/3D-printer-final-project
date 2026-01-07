@@ -1,5 +1,11 @@
 import RPi.GPIO as GPIO
+import pygame
 import time
+
+pygame.joystick.init()
+pygame.init()
+joysticks=[pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
+
 rightMotor=10
 leftMotor=11
 rightDirection=GPIO.HIGH
@@ -34,4 +40,25 @@ def pulse():
 def pulseIndex(Right,Left):
     return (GPIO.HIGH if Right else GPIO.LOW, GPIO.HIGH if Left else GPIO.LOW)
 
-def pulseRatio(motor,):
+
+try:
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.JOYAXISMOTION:
+                # Example: print axis movements
+                print(f"Axis {event.axis} moved to {event.value}")
+            elif event.type == pygame.JOYBUTTONDOWN:
+                # Example: print button presses
+                print(f"Button {event.button} pressed")
+            # ... handle other events like JOYHATMOTION, etc.
+
+        # Add a small delay to prevent the loop from running too fast
+        time.sleep(0.01)
+
+except KeyboardInterrupt:
+    print("Exiting")
+    joystick.quit()
+    pygame.quit()
+else:
+    print("No joysticks found")
+    pygame.quit()
