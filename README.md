@@ -11,6 +11,6 @@ Other design considerations is the type of timing belts for the printer and I ch
 <img width="1919" height="1005" alt="Assembly v19_ (William) - Autodesk Fusion (Education License)  12_17_2025 4_48_25 PM" src="https://github.com/user-attachments/assets/f99e3015-53af-4b6b-9ff2-e900fe8c15cf" />
 # Electrical Design
 To control the 3d printer I used a microcontroller (arduino for testing and rasberry pi for final design), motor controller (DM332t stepper motor controller), and an external power supply. The motor is connected to the motor controller based on the corresponding phases on the motor. The phases represent the 2 difference coils that adjust the magnetic field within the motor to make the motor spin a percise step. The motor controller is powered by the external power supply and controlled by the micro-controller. A camera can be added onto the rasberry pi for color quantization but that implementation has not been tested yet.!
-[71IycyW5Y1L _AC_SX679_](https://github.com/user-attachments/assets/3d0e236b-98f4-49c8-bec4-a7360fa516bd)
+![71IycyW5Y1L _AC_SX679_](https://github.com/user-attachments/assets/16f95469-14a6-43bf-9948-d3b3c347e244)
 
 # Software Logic
