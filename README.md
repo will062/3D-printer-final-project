@@ -12,10 +12,13 @@ Other design considerations is the type of timing belts for the printer and I ch
 # Electrical Design
 To control the 3d printer I used a microcontroller (arduino for testing and rasberry pi for final design), motor controller (DM332t stepper motor controller), and an external power supply. The motor is connected to the motor controller based on the corresponding phases on the motor. The phases represent the 2 difference coils that adjust the magnetic field within the motor to make the motor spin a percise step. The motor controller is powered by the external power supply and controlled by the micro-controller. For rasberry pi specifically a logic level shifter is necessarry because the motor controller registers 5 Volt signals while the GPIO in the rasberry pi is 3.3 V output. A camera can be added onto the rasberry pi for color quantization but that implementation has not been tested yet.
 ![71IycyW5Y1L _AC_SX679_](https://github.com/user-attachments/assets/16f95469-14a6-43bf-9948-d3b3c347e244)
+
 External Power Supply
 ![41rgkHMY+ML _AC_SL1000_](https://github.com/user-attachments/assets/d62712a0-066e-4f17-bd16-2b3ee5ebccaf)
+
 Stepper Motor
 ![61uzJ6NEMHL _SX522_](https://github.com/user-attachments/assets/293147c5-d5db-4d5d-82fe-b677c5d4749a)
+
 Stepper Motor Controller
 ![71DGV6JC4lL _SL1200_](https://github.com/user-attachments/assets/d2547be0-be9a-4e4f-b460-3bc6ac830d64)
 Logic Level Shifter
