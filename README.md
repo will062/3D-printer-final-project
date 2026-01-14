@@ -37,3 +37,10 @@ Logic Level Shifter
 
 General Electical Drawing
 # Software Logic
+The code for the Arduino was a simple test code which was set the output pins and send a certain number of pulses to the motor switch the direction of the motor and send the same number of pulses to the motor. In that case it was 400 pulses so the motor spins one full rotation.
+
+![My Project](https://github.com/user-attachments/assets/c0de9ce6-26fe-47e2-9778-59390e9735d8)
+
+For Rasberry Pi I used the inputs from a controller control the motion of the stepper motor by using the pygame library to detect joystick inputs and converting those joystick inputs into moving the stepper motor. Left on the joystick turns the motor counterclockwise while righting on the joystick will turn the motor clockwise. In addition to that code I also created methods for further use in the future when I want to use 2 motors on the rasberry pi where I change how much each motor spins relative to each other.
+
+For color quantization I used the openCV library and took the camera input and turned the input into a numpy array while turning the uint8 into float32. Then I used open CV library to convert the colors on the picture to 8 distinct colors before converting it back and showing the output of the camera before color quantization and after color quantization.
