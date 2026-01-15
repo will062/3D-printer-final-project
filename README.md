@@ -44,3 +44,5 @@ The code for the Arduino was a simple test code which was set the output pins an
 For Rasberry Pi I used the inputs from a controller control the motion of the stepper motor by using the pygame library to detect joystick inputs and converting those joystick inputs into moving the stepper motor. Left on the joystick turns the motor counterclockwise while righting on the joystick will turn the motor clockwise. In addition to that code I also created methods for further use in the future when I want to use 2 motors on the rasberry pi where I change how much each motor spins relative to each other.
 
 For color quantization I used the openCV library and took the camera input and turned the input into a numpy array while turning the uint8 into float32. Then I used open CV library to convert the colors on the picture to 8 distinct colors before converting it back and showing the output of the camera before color quantization and after color quantization.
+
+![Code block diagram](https://github.com/user-attachments/assets/f65c9c99-1940-46b4-9813-e6945847e1df)
